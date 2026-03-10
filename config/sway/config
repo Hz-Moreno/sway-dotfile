@@ -46,13 +46,14 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
+# Substitua o swaylock pelo hyprlock
 exec swayidle -w \
-         timeout 75 'swaylock -f -c 000000' \
-         timeout 150 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+         timeout 300 'hyprlock' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'hyprlock'
 
-# Atalho para bloquear a tela com a tecla Scroll Lock
-bindsym Scroll_Lock exec swaylock -c 000000
+# Atalho para bloquear a tela manualmente (Substituindo o seu Scroll_Lock atual)
+bindsym Scroll_Lock exec hyprlock
 
 ### Input configuration
 #
