@@ -1,3 +1,11 @@
+### DEMO
+
+
+https://github.com/user-attachments/assets/1f36608d-b62c-4810-8b7a-82aca1a473c2
+
+
+
+
 ### FEDORA - SWAY
 Minimalist, performance-driven configurations for Sway WM on Fedora Linux, optimized for a Fullstack development workflow.
 
