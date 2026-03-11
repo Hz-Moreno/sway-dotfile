@@ -5,6 +5,13 @@ input "2362:9523:Gaming_Mouse" {
     accel_profile flat
 }
 
+default_border pixel 2
+default_floating_border normal
+hide_edge_borders smart
+
+gaps inner 10
+gaps outer 5
+
 set $mod Mod4
 set $left h
 set $down j
@@ -111,3 +118,4 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+include $HOME/.cache/wal/colors-sway
