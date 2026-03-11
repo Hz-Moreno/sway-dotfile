@@ -3,10 +3,20 @@
     "position": "top",
     "height": 32,
     "spacing": 12,
-    "modules-left": ["sway/workspaces"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
     "modules-right": ["temperature", "cpu", "memory", "clock", "custom/recorder"],
 
+"sway/mode": {
+        "format": "󰩨  MODE: {} ",
+        "max-length": 50
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
