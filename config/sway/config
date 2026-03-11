@@ -10,15 +10,15 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term foot
+set $term kitty
 
 set $rofi_cmd rofi -terminal '$term'
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 exec_always pkill swayidle; swayidle -w \
-    timeout 300 'hyprlock &' \
-    timeout 450 'swaymsg output "*" dpms off' \
-    timeout 500 'hyprlock & sleep 1; systemctl suspend' \
+    timeout 500 'hyprlock &' \
+    timeout 650 'swaymsg output "*" dpms off' \
+    timeout 700 'hyprlock & sleep 1; systemctl suspend' \
     resume 'swaymsg output "*" dpms on' \
     before-sleep 'hyprlock'
 
@@ -27,7 +27,7 @@ bindsym Scroll_Lock exec hyprlock
 bindsym $mod+w exec $term --title="Wallpaper Picker" -e ~/dotfiles/scripts/wall-picker.sh
 bindsym $mod+Shift+w exec ~/dotfiles/scripts/wall-random.sh
 
-for_window [title="Wallpaper Picker"] floating enable, resize set 800 500, move position center
+for_window [app_id="kitty" title="Wallpaper Picker"] floating enable, resize set 800 500, move position center
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
