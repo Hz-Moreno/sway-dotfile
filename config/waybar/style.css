@@ -65,6 +65,13 @@ window#waybar.hidden {
     font-weight: 700;
 }
 
+#custom-recorder.recording {
+    color: #ff5555;
+    background: rgba(255, 85, 85, 0.1);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
 @keyframes blink {
     to {
         background-color: @color1;

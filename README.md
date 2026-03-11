@@ -16,6 +16,7 @@ Minimalist, performance-driven configurations for Sway WM on Fedora Linux, optim
 
 ### Dependencies
 
+* wf-recorder
 * pywal 
 * hyperlock
 * awww
