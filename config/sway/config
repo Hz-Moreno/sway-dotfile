@@ -1,7 +1,15 @@
 exec_always awww-daemon
+exec_always awww img ~/.config/wallpaper/current_wallpaper.*
+exec_always wal -R
+exec_always pkill -USR2 waybar
+
+input "type:keyboard" {
+    xkb_layout "us"
+    xkb_variant "intl"
+}
 
 input "2362:9523:Gaming_Mouse" {
-    pointer_accel -0.5
+    pointer_accel -0.4
     accel_profile flat
 }
 
