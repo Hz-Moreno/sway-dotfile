@@ -26,16 +26,17 @@ set $down j
 set $up k
 set $right l
 set $term kitty
+set $browser brave
 
 set $rofi_cmd rofi -terminal '$term'
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
-exec_always pkill swayidle; swayidle -w \
-    timeout 500 'hyprlock &' \
-    timeout 650 'swaymsg output "*" dpms off' \
-    timeout 700 'hyprlock & sleep 1; systemctl suspend' \
-    resume 'swaymsg output "*" dpms on' \
-    before-sleep 'hyprlock'
+# exec_always pkill swayidle; swayidle -w \
+#    timeout 500 'hyprlock &' \
+#    timeout 650 'swaymsg output "*" dpms off' \
+#    timeout 700 'hyprlock & sleep 1; systemctl suspend' \
+#    resume 'swaymsg output "*" dpms on' \
+#    before-sleep 'hyprlock'
 
 bindsym Scroll_Lock exec hyprlock
 
